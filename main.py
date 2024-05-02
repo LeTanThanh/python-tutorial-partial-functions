@@ -40,3 +40,18 @@ if __name__ == "__main__":
 
   Since you'll create partial functions sometimes, Python provides you with the partial function from the functools standard module to help you define a partial functions more easily.
   """
+
+  # Python partial function from functools module
+
+  """
+  functions.partial(fn, /, *args, **kwargs)
+  """
+
+  from functools import partial
+
+  def multiply(a, b):
+    return a * b
+
+  double = partial(multiply, b = 2)
+  print(double(a = 10))
+  print(double(a = 10, b = 3))
