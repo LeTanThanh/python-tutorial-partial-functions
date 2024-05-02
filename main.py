@@ -55,3 +55,18 @@ if __name__ == "__main__":
   double = partial(multiply, b = 2)
   print(double(a = 10))
   print(double(a = 10, b = 3))
+
+  # Python partial functions and variables
+
+  def multiply(a, b):
+    return a*b
+
+  x = 2
+  f = partial(multiply, b = x)
+
+  result = f(10)  # 20
+  print(result)
+
+  x = 3
+  result = f(10)  # 20
+  print(result)
